@@ -14,23 +14,22 @@ HWND myconsole = GetConsoleWindow();
 HDC dc = GetDC(myconsole);
 DWORD dwWritten;
 
-int XSIZE = 1800;
-int YSIZE = 1800;
-
-int XOFF = 1000;
-int YOFF = 100;
-
-int K = 2;
-int R = 2;
-
 class Point
 {
 public:
     int x;
     int y;
     int r,g,b;
-
 };
+
+int XSIZE = 1800; // x window size
+int YSIZE = 1800; // y window size
+
+int XOFF = 1000; // x offset (for window positioning)
+int YOFF = 100; // y offset (for window positioning)
+
+int K = 1;
+int R = 2;
 
 void plot (Point start)
 {
@@ -111,11 +110,11 @@ Point findPosition(string s, Point start, Point cornerA, Point cornerC, Point co
 int main()
 {
     string line;
-    ifstream file ("mouse2.fa");
+    ifstream file (""); // .fasta file goes here
 
     string s = "";
 
-    // Default corner positions
+    // default corner positions
 
     Point cornerA;
     cornerA.x = 0;
@@ -146,9 +145,11 @@ int main()
             s = line.substr(i, K);
             transform(s.begin(), s.end(), s.begin(), ::toupper); // ensuring substring is uppercase
 
+            // reset colors
             start.r = 0;
             start.g = 0;
             start.b = 0;
+            
             start = findPosition(s, start, cornerA, cornerC, cornerG, cornerT);
             plot(start);
         }
@@ -159,4 +160,3 @@ int main()
         cout << "error finding file.";
     }
 }
-
