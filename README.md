@@ -3,11 +3,12 @@
 
 
 <p align="center">
-  <img src="images/mousek1.png" width="300" height="300" >
-  <img src="images/mouse_k2_el.PNG" width="300" height="300" >
-  <img src="images/mouse_k3_l.PNG" width="300" height="300" >
-  <img src="images/ecoli_1.PNG" width="300" height="300" >
-  <img src="images/ecoli_k2_nml.PNG" width="300" height="300" >
+  <img src="images/mousek1.png" width="200" height="200" >
+  <img src="images/mouse_k2_el.PNG" width="200" height="200" >
+  <img src="images/mouse_k3_l.PNG" width="200" height="200" >
+  <img src="images/ecoli_1.PNG" width="200" height="200" >
+  <img src="images/ecoli_k2_nml.PNG" width="200" height="200" >
+  <img src="images/cow_k2_nml.PNG" width="200" height="200" >
 </p>
 
 # Description
